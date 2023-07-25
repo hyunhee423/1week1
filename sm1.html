@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        body{
+            background: #ccc;
+        }
+
+        header{
+            height: 100px;
+            background: #f00;
+        }
+
+        main{
+            width: 800px;
+            /* background: #888; */
+            margin: 0 auto;
+        }
+
+        /* main > * 직계자식 */
+
+        main > * {
+            margin-top: 10px;
+        }
+
+        .box1{
+            height: 100px;
+            background: #fff;
+        }
+
+        .box2{
+            display: flex;
+            gap: 10px;
+        }
+        .box2 div{
+            flex: 1;
+            height: 100px;
+            background: #fff;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        header
+    </header>
+    <main>
+        <div class="box1">box</div>
+
+
+        <div class="box2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+
+<style>
+    .box3{
+        display: flex;
+    }
+    .box3 > *{
+        flex: 1;
+        height: 100px;
+        background: #fff;
+    }
+
+    /*  
+    * 뒤에 있는 * 선택
+    */
+
+    .box3 > * + *{
+        margin-left: 10px;
+    }
+
+
+    
+</style>
+
+
+        <div class="box3">
+            <div>1</div>
+            <section>2</section>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+
+
+        <style>
+            .box4{
+                display: flex;
+                justify-content: space-between;
+                /* pos */
+                background: #f00;
+                padding: 10px;
+            }
+            .box4 div{
+                height: 100px;
+                background: #fff;
+                width: calc(50% - 5px);
+            }
+        </style>
+
+        <div class="box4">
+            <div>1</div>
+            <div>2</div>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자식요소에 쓰는 수치</title>
+</head>
+<body>
+
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        .list1{
+            display: flex;
+            gap: 10px;
+        }
+        .list1 li{
+            width: 300px;
+            height: 100px;
+            background: #f00;
+            /* flex-grow: 1; */
+        }
+
+        .list1 li:last-child{
+            /* flex-grow: 2; */
+        }
+    </style>
+
+    <h1>flex-grow</h1>
+    <p>자라나다 증가의 비율</p>
+
+
+    <ul class="list1">
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+
+
+<style>
+    /* 
+    flex 기본수치 flex-shrink:1로 기본값세팅되어있음
+    */
+    .list2{
+        display: flex;
+        gap: 10px;
+    }
+    .list2 li{
+        width: 300px;
+        height: 100px;
+        background: #f00;
+        flex-shrink: 0;
+    }
+</style>
+
+    <h1>flex-shrink</h1>
+    <p>수축 수축의 비율</p>
+        <ul class="list2">
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+
+
+
+<style>
+    .list3{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .list3 li{
+        background: #f00;
+        height: 100px;
+        flex-basis: 300px;
+    }
+</style>
+    <h1>flex-basis</h1>
+    <p>기본 기준 중심축기준값(위드or높이)</p>
+        <ul class="list3">
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+
+
+<style>
+    .list4{
+        display: flex;
+        gap: 10px;
+    }
+    .list4 li{
+        height: 100px;
+        background: #f00;
+        flex: 1;
+    }
+</style>
+    <h1>flexLgrow shrink basis</h1>
+    <p>flex:1 === flex:1 1 auto === flex 1 1 100%</p>
+        <ul class="list4">
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+
+</body>
+</html>
